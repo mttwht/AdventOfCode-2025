@@ -1,11 +1,6 @@
-import sys
-
 from lib import file
 
-if len(sys.argv) > 1 and sys.argv[1] == "test":
-    lines = file.readlines("input/02-example.txt")
-else:
-    lines = file.readlines("input/02.txt")
+lines = file.readlines()
 
 invalid_ids = []
 

@@ -1,11 +1,6 @@
-import sys
-
 from lib import file
 
-if len(sys.argv) > 1 and sys.argv[1] == "test":
-    lines = file.readlines("input/01-example.txt")
-else:
-    lines = file.readlines("input/01.txt")
+lines = file.readlines()
 
 pos = 50
 password = 0

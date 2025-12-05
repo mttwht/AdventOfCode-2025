@@ -16,3 +16,9 @@ def readlines() -> list[str]:
     
     with open("input/" + filename, "r") as file:
         return [line.strip() for line in file.readlines()]
+
+
+def readgrid() -> list[list[str]]:
+    '''Read and return a grid of characters from a file'''
+    lines = readlines()
+    return [list(line) for line in lines]

@@ -30,3 +30,20 @@ def getNeighbours(
             neighbors.append((nx, ny))
 
     return neighbors
+
+def find(target: str, grid: list[str]) -> tuple[int, int] | None:
+    """
+    Find the position of a target character in a 2D grid.
+
+    Parameters:
+    target (str): The character to search for.
+    grid (list of str): The 2D grid represented as a list of strings.
+
+    Returns:
+    tuple of int: A tuple (x, y) representing the position of the target character,
+                  or None if the character is not found.
+    """
+    for y, row in enumerate(grid):
+        if target in row:
+            return (row.index(target), y)
+    return None
